@@ -14,19 +14,21 @@ const CarDetail = ({ data }) => {
       dispatch({ type: CarActionType.GET_CAR_DETAIL, detail: data[0] });
     }
   }, [data, dispatch]);
+
+  const curreny = convertCurrency(data[0].amount);
   return (
     <>
       <NextSeo
-        title="peoplecar"
-        description="B2C 차량대여 서비스"
-        canonical="https://www.peoplecar.co.kr"
+        title={`${data[0].attribute.brand} ${data[0].attribute.name}`}
+        description={curreny}
+        canonical="https://pre-onboarding-7th-2-1-9-pnn5-p8dzojdtf-tirhande.vercel.app/"
         openGraph={{
           type: 'website',
-          url: 'https://www.peoplecar.co.kr',
-          title: `${data[0].brand} ${data[0].name}`,
-          description: convertCurrency(data[0].amount),
+          url: 'https://pre-onboarding-7th-2-1-9-pnn5-p8dzojdtf-tirhande.vercel.app/',
+          title: `${data[0].attribute.brand} ${data[0].attribute.name}`,
+          description: curreny,
           images: [{ url: data[0].attribute.imageUrl }],
-          site_name: 'peoplecar',
+          site_name: 'B2C 차량대여 서비스',
         }}
       />
       <Layout content={<DetailContainer />} isDetail />
