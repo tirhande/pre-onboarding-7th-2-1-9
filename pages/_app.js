@@ -1,8 +1,5 @@
 import CarProvider from '../src/stores/CarListProvider';
 import { GlobalStyle } from '../src/styles/globals';
-import '@fontsource/Inter/400.css';
-import '@fontsource/Inter/500.css';
-import '@fontsource/Inter/700.css';
 import CarDetail from './car/[id]';
 import CarDetailProvider from '../src/stores/CarDetailProvider';
 import { motion, AnimatePresence } from 'framer-motion';
