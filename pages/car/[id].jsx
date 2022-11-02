@@ -21,10 +21,10 @@ const CarDetail = ({ data }) => {
       <NextSeo
         title={`${data[0].attribute.brand} ${data[0].attribute.name}`}
         description={curreny}
-        canonical="https://pre-onboarding-7th-2-1-9-pnn5-p8dzojdtf-tirhande.vercel.app/"
+        canonical="https://pre-onboarding-7th-2-1-9.vercel.app/"
         openGraph={{
           type: 'website',
-          url: 'https://pre-onboarding-7th-2-1-9-pnn5-p8dzojdtf-tirhande.vercel.app/',
+          url: `https://pre-onboarding-7th-2-1-9.vercel.app/car/${data[0].id}`,
           title: `${data[0].attribute.brand} ${data[0].attribute.name}`,
           description: curreny,
           images: [{ url: data[0].attribute.imageUrl }],
